@@ -131,12 +131,15 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-
+  
   &:hover {
     background-color: black;
     color: white;
     transition: all .4s ease;
     -webkit-transition: all .4s ease;
+    div{
+      color: white;
+    }
   }
 }
 

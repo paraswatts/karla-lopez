@@ -119,6 +119,9 @@
   @media (max-width: 575px) {
     font-size: 14px;
   }
+  @media (max-width: 400px) {
+    font-size: 12px;
+  }
 }
 
 .download_container {
@@ -139,6 +142,9 @@
   @media (max-width: 575px) {
     padding: 0 15px 0 5px;
     font-size: 14px;
+  }
+  @media (max-width: 400px) {
+    font-size: 12px;
   }
 }
 

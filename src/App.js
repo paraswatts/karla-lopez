@@ -35,7 +35,6 @@ if (window.location.hostname === 'localhost') {
   // connectFunctionsEmulator(functions, 'localhost', 5001);
   // connectStorageEmulator(storage, "localhost", 9199);
 }
-const analytics = getAnalytics(firebaseApp);
 
 function App() {
   const [toggle, setToggle] = useState(false)
@@ -59,13 +58,12 @@ function App() {
         variantSuccess: classes.success
       }}
       TransitionComponent={Grow}
-    ><CartProvider mode="checkout-session" stripe={process.env.REACT_APP_STRIPE_KEY} currency={"usd"}>
-        <Provider store={store}>
-          <PersistGate persistor={persistor}>
-            <Routes />
-          </PersistGate>
-        </Provider>
-      </CartProvider>
+    >
+      <Provider store={store}>
+        <PersistGate persistor={persistor}>
+          <Routes />
+        </PersistGate>
+      </Provider>
     </SnackbarProvider>
   )
 }

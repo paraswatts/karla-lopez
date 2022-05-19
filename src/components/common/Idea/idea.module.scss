@@ -44,6 +44,12 @@
   padding: 4px 60px;
   display: inline-flex;
   cursor: pointer;
+  &:hover {
+    background-color: black;
+    color: white;
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+  }
 }
 
 .idea_line3 {
