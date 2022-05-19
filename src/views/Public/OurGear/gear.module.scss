@@ -1,0 +1,321 @@
+@import "../../common.scss";
+
+.banner_sec {
+  padding: 180px 0 120px;
+  min-height: 100%;
+  overflow: hidden;
+  @media (max-width: 991px) {
+    padding-top: 120px;
+  }
+  @media (max-width: 575px) {
+    padding-top: 90px;
+  }
+}
+
+.gear_div {
+  background-repeat: no-repeat;
+  border: 1px solid #000000;
+  width: 100%;
+  background-position: center;
+  height: 300px;
+  background-size: cover;
+  position: relative;
+  border-radius: 30px;
+  h3 {
+    color: #ffffff;
+    filter: drop-shadow(0px 0px 5px #000000);
+  }
+
+  .product_img {
+    border-radius: 30px;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    opacity: 100%;
+    @media (hover: none) and (pointer: coarse) {
+      /* touchscreens */
+      opacity: 100%;
+    }
+    @media (max-width: 768px) {
+      opacity: 100%;
+    }
+  }
+}
+
+.gear_div:hover {
+  img {
+    opacity: 100%;
+  }
+  .shop_info_message {
+    color: $limeGreen;
+    font-size: 10px;
+    text-align: center;
+    filter: drop-shadow(0px 0px 5px #ffffff);
+    font-weight: 600;
+    margin-left: 20px;
+  }
+  .fullscreen {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    opacity: 1;
+  }
+}
+
+.custom_snack_bar {
+  background-color: $limeGreen;
+  min-width: 288px;
+  z-index: 9999999999999;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif !important;
+  padding: 6px 16px;
+  border-radius: 4px;
+  box-shadow: 0px 3px 5px -1px rgb(0 0 0 / 20%),
+    0px 6px 10px 0px rgb(0 0 0 / 14%), 0px 1px 18px 0px rgb(0 0 0 / 12%);
+  right: 0px;
+}
+
+.snack_icon {
+  fill: white;
+  width: 1em;
+  height: 1em;
+}
+
+.snack_bar_message {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.img_content {
+  position: absolute;
+  bottom: 0;
+  h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    margin-left: 18px;
+    color: #ffffff;
+    font-size: 18px;
+    @media (max-width: 768px) {
+      color: #ffffff;
+      filter: drop-shadow(0px 0px 5px #000000);
+    }
+    @media (hover: none) and (pointer: coarse) {
+      color: #ffffff;
+      filter: drop-shadow(0px 0px 5px #000000);
+    }
+  }
+
+  ul li {
+    font-family: "Montserrat", sans-serif;
+    margin-left: 18px;
+    color: #ffffff;
+    font-size: 12px;
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 5px #000000);
+    @media (hover: none) and (pointer: coarse) {
+      color: #ffffff;
+      filter: drop-shadow(0px 0px 5px #000000);
+    }
+    @media (max-width: 768px) {
+      color: #ffffff;
+      filter: drop-shadow(0px 0px 5px #000000);
+    }
+  }
+}
+
+.sizes {
+  li {
+    cursor: pointer;
+    font-weight: 100;
+    span {
+      font-weight: 600;
+    }
+    list-style-type: none;
+  }
+}
+
+.fullscreen {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  opacity: 0;
+  @media (max-width: 768px) {
+    opacity: 0;
+  }
+  @media (hover: none) and (pointer: coarse) {
+    opacity: 1;
+  }
+}
+.fullscreen:hover {
+  cursor: pointer;
+}
+
+.modal_container {
+  background-color: white;
+}
+.size_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ul {
+    display: flex;
+    margin-top: 1rem !important;
+    padding-inline-start: 0;
+  }
+  ul li {
+    font-family: "Montserrat", sans-serif;
+    margin-left: 18px;
+    color: #000000;
+    font-size: 16px;
+  }
+}
+.modal_heading {
+  font-weight: 600;
+  font-size: 22px;
+  width: 100%;
+  text-align: center;
+}
+
+.product_image {
+  width: 400px;
+  height: 400px;
+}
+
+.shop_info_message {
+  text-align: center;
+  color: transparent;
+  font-size: 10px;
+  filter: drop-shadow(0px 0px 5px #ffffff);
+  font-weight: 600;
+  margin-left: 20px;
+  @media (hover: none) and (pointer: coarse) {
+    color: $limeGreen;
+    font-size: 10px;
+    text-align: center;
+    filter: drop-shadow(0px 0px 5px #ffffff);
+    font-weight: 600;
+    margin-left: 20px;
+  }
+}
+
+.main_grid {
+  margin-top: 30px !important;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "gear_short_shirt gear_long_shirt gear_hoodies"
+    "gear_sweaters gear_sweaters gear_hoodies";
+  @media (max-width: 991px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "gear_short_shirt gear_long_shirt"
+      "gear_sweaters gear_hoodies";
+  }
+  @media (max-width: 798px) {
+    grid-gap: 0px;
+    grid-row-gap: 15px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "gear_short_shirt"
+      "gear_long_shirt"
+      "gear_sweaters"
+      "gear_hoodies";
+  }
+}
+
+.gear_short_shirt {
+  grid-row: 1/2;
+  @media (max-width: 798px) {
+    grid-row: 1/2;
+  }
+  ul {
+    display: flex;
+  }
+}
+
+.gear_long_shirt {
+  grid-row: 1/2;
+  @media (max-width: 798px) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  ul {
+    display: flex;
+  }
+}
+
+.gear_sweaters {
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 2;
+  @media (max-width: 991px) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  @media (max-width: 798px) {
+    grid-column: 1 / span 2;
+    grid-row: auto;
+  }
+  ul {
+    display: flex;
+  }
+}
+
+.gear_hoodies {
+  grid-row: 1 / span 3;
+  display: flex;
+  @media (max-width: 991px) {
+    height: 300px;
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  @media (max-width: 798px) {
+    grid-column: 1/2;
+    grid-row: auto;
+  }
+  height: 612px;
+  @media (max-width: 769px) {
+    height: 300px;
+  }
+  ul {
+    display: flex;
+  }
+}
+
+@keyframes xAxis {
+  100% {
+    transform: translateX(calc(50vw - 105px));
+  }
+}
+
+@keyframes yAxis {
+  100% {
+    transform: translateY(calc(-50vh + 75px));
+  }
+}
+
+@keyframes shakeCart {
+  25% {
+    transform: translateX(6px);
+  }
+  50% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,67 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* .SnackbarItem-variantSuccess {
+  background-color: #05c46b !important;
+}
+
+.SnackbarContainer-root {
+  z-index: 99999999999 !important;
+  margin-top: 10%;
+  margin-right: calc();
+} */
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+use {
+  stroke: red;
+  opacity: 0;
+  animation: pulsing 1000ms ease-out infinite;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 10px !important;
+  height: 10px !important;
+  opacity: 1 !important;
+  background: linear-gradient(96.13deg, #04bc2c 4.19%, #01c0cc 97.55%);
+  border-radius: 10px;
+  border-top: 0px !important;
+  border-bottom: 0px !important;
+}

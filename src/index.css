@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+
+#app div {
+  height: 100%;
+}
+
+ /* @media (min-width: 1200px) {
+  .container {
+    max-width: 1140px !important;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+} 
+@media (min-width: 768px) {
+  .container {
+    max-width: 880px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 880px !important;
+  }
+} */
+/* @media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+} */

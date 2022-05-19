@@ -1,0 +1,9 @@
+.carousel-indicators .active {
+  background: white !important;
+  opacity: 1;
+}
+
+.carousel {
+  max-width: 400px;
+  margin: auto;
+}

@@ -1,0 +1,14 @@
+@import "../../styles.scss";
+
+.container {
+  @extend %full-page-fixed;
+
+  z-index: $max-zindex;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.loader {
+  @extend %flex-center;
+
+  height: 100%;
+}

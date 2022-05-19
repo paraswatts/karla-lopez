@@ -1,0 +1,20 @@
+.social_icons {
+  margin: 0;
+  gap: 25px;
+  li {
+    a {
+      img {
+        width: 30px;
+      }
+    }
+  }
+  @media (max-width: 764px) {
+    margin-top: 10px;
+  }
+  li {
+    list-style-type: none;
+  }
+}
+ul {
+  padding: 0px;
+}

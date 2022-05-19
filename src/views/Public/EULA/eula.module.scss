@@ -1,0 +1,22 @@
+@import "../../common.scss";
+
+.banner_sec {
+  padding: 160px 0 120px;
+  min-height: 100%;
+  overflow: hidden;
+  @media (max-width: 991px) {
+    padding-top: 120px;
+  }
+  @media (max-width: 575px) {
+    padding-top: 90px;
+  }
+  p {
+    font-size: 16px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h1, h2 {
+    font-weight: 700;
+  }
+}
