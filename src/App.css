@@ -46,8 +46,13 @@
   }
 }
 
+
 ::-webkit-scrollbar {
-  display: none;
+  width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
 }
 
 use {

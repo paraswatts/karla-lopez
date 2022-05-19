@@ -1,10 +1,6 @@
 //libs
 import React from "react";
-import FooterApple from 'src/images/icons/appstore.svg'
-import PostablurLogo from 'src/images/banner_logo.png'
 import { useHistory } from "react-router-dom";
-import { ABOUT_US, CCPA_PAGE, EULA, FAQS } from "src/shared/constants";
-import { SocialMediaStrip } from "src/components";
 import DiagonalArrow from 'src/images/diagonal_arrow.svg'
 
 //styles
@@ -38,9 +34,9 @@ const Footer = ({ }) => {
   return (
     <footer className={S.footer}>
       <SocialContacts />
-      <div className={S.contact_container}>
-        <p className={S.contact_line1}>iamnekoshi@gmail.com</p>
-        <p className={S.contact_line2}>+52 1 771 700 2281</p>
+      <div className={S.contact_container1}>
+        <div className={S.contact_line1}>iamnekoshi@gmail.com</div>
+        <div className={S.contact_line2}>+52 1 771 700 2281</div>
       </div>
     </footer>
   );

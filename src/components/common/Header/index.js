@@ -39,6 +39,10 @@ const Header = () => {
         // history.push(route)
     }
 
+    const downloadFile = () => {
+        window.open('https://firebasestorage.googleapis.com/v0/b/karla-lopez.appspot.com/o/karla-lopez.pdf?alt=media&token=280a4844-f052-491f-a219-0050245e091c')
+    }
+
     return (<header id="header" className={`${S.header}`}>
         <div className="container">
             <nav className={`navbar px-0`}>
@@ -49,7 +53,7 @@ const Header = () => {
                     <ul className="navbar-nav ml-auto align-items-center flex-row justify-content-end">
                         {HEADER_LINKS.map((option, idx) =>
                         (option.isDownload ?
-                            <div className={S.download_container}>
+                            <div className={S.download_container} onClick={downloadFile}>
                                 <div className={S.download_button}>
                                     DOWNLOAD CV
                                 </div>

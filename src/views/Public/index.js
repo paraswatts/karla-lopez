@@ -1,11 +1,2 @@
 export { default as Home } from "./Home";
-export { default as ContactUs } from "./ContactUs";
-export { default as OurGear } from "./OurGear";
-export { default as AboutUs } from "./AboutUs";
-export { default as FAQs } from "./FAQs";
-export { default as ThankYou } from "./ThankYou";
-export { default as Cart } from "./Cart";
 export { default as PrivacyPolicy } from "./PrivacyPolicy";
-export { default as Terms } from "./Terms";
-export { default as CCPA } from "./CCPA";
-export { default as EULA } from "./EULA";

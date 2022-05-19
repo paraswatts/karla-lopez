@@ -10,48 +10,71 @@
   padding: 59px 128px;
   justify-content: space-between;
   align-items: flex-end;
+  @media (max-width: 991px) {
+    padding: 59px 70px;
+  }
+  @media (max-width: 575px) {
+    flex-direction: column;
+    padding: 159px 32px 16px;
+    align-items: flex-start;
+    bottom: 0px;
+    height: 542px;
+  }
 }
 
-.social_container{
+.social_container {
   display: flex;
   flex-direction: column;
-  max-width:384px;
+  max-width: 384px;
   justify-content: space-between;
   height: 100%;
 }
 
-.social_media_name{
+.social_media_name {
   font-weight: 500;
   font-size: 36px;
   line-height: 40px;
   /* identical to box height, or 111% */
-  
+
   /* Black */
   color: #000000;
   text-decoration: none;
   margin-right: 8px;
-  &:hover{
+
+  &:hover {
     color: #000000;
   }
 }
 
-.contact_container{
-}
-.contact_line1{
-  font-weight: 500;
-font-size: 16px;
-line-height: 24px;
-/* identical to box height, or 150% */
+.contact_container {
+  @media (max-width: 575px) {
+    padding-bottom: 50px;
+  }
 
-color: #000000;
+  display: flex;
 }
 
-.contact_line2{
+.contact_line1 {
   font-weight: 500;
-font-size: 16px;
-line-height: 24px;
-/* identical to box height, or 150% */
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
 
-color: #000000;
-text-align: right;
+  color: #000000;
+}
+
+.contact_line2 {
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  color: #000000;
+  text-align: right;
+
+  @media (max-width: 575px) {
+    padding-bottom: 16px;
+    text-align: left;
+  }
 }
