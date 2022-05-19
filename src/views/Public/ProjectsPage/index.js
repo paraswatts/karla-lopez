@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import PrivacyPolicy from "./PrivacyPolicy";
+import ProjectsPage from "./ProjectsPage";
 
 const mapStateToProps = (state) => {
   return {};
@@ -10,4 +10,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(PrivacyPolicy);
+export default connect(mapStateToProps, mapDispatchToProps)(ProjectsPage);

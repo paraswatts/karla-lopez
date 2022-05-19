@@ -1,0 +1,36 @@
+@import "../../common.scss";
+
+.banner_sec {
+  background: white;
+  padding: 174px 0 0px;
+  min-height: 100%;
+  overflow: hidden;
+
+  @media (max-width: 575px) {
+    padding: 74px 0 0px;
+  }
+}
+
+
+.projects_main_container{
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 575px) {
+    display: flex;
+    flex-direction: column;
+    padding-bottom:0px;
+    align-items: center;
+  }
+}
+
+.lets_turn_idea_container {
+  display: flex;
+  padding: 0px 0 120px 0;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 575px) {
+    padding: 100px 0 60px 0;
+  }
+}
+

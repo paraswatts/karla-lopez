@@ -3,10 +3,9 @@ import React from "react";
 //styles
 import S from "./home.module.scss";
 import Monkey from 'src/images/monkey.gif'
-import { HeaderFooterHoc } from "src/components";
+import { HeaderFooterHoc, Idea, Projects } from "src/components";
 import DiagonalArrow from 'src/images/diagonal_arrow.svg'
 import Karla from 'src/images/karla.png'
-import Projects from "./Projects";
 
 const socialLinks = [{
   _id: 1,
@@ -63,21 +62,7 @@ const Home = ({ }) => {
                     <SocialContacts />
                   </div>
                   <div className={S.lets_turn_idea_container}>
-                    <div className={S.idea_outer_container}>
-                      <div className={S.idea_inner_container}>
-                        <p className={S.idea_line1}>
-                          LET’S TURN YOUR IDEAS<br />
-                          INTO REALITY.
-                        </p>
-                        <p className={S.idea_line2}>
-                          CONTACT
-                        </p>
-                        <p className={S.idea_line3}>
-                          Feel free to get in touch with me.<br />
-                          I am always open to discussing new projects, creative ideas.
-                        </p>
-                      </div>
-                    </div>
+                    <Idea />
                   </div>
                   <div className={S.about_me_container}>
                     <img src={Karla} className={S.karla}></img>
@@ -111,7 +96,9 @@ const Home = ({ }) => {
                       #auto-layout&nbsp;&nbsp;&nbsp;&nbsp;#components
                     </p>
                   </div>
-                  <Projects />
+                  <div className={S.projects_main_container}>
+                    <Projects />
+                  </div>
                   <div className={S.quote_container}>
                     <p className={S.quote_line1}>
                       “

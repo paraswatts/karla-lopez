@@ -1,5 +1,23 @@
 .contact_heading {
-  font-family: "Montserrat", sans-serif;
-  font-size: 23px;
-  font-weight: bold;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28px;
+  /* identical to box height, or 156% */
+  color: #000000;
 }
+
+.contact_sub_heading {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 40px;
+  /* identical to box height, or 111% */
+  color: #000000;
+}
+
+.heading_container{
+  padding: 48px 0px;
+  @media (max-width: 575px) {
+    padding: 28px 18px;
+  }
+}
+

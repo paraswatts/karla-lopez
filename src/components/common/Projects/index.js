@@ -4,7 +4,7 @@ import Project1 from 'src/images/project1.png'
 import Project2 from 'src/images/project2.png'
 import Project3 from 'src/images/project3.png'
 import ArrowRight from 'src/images/arrow_right.svg'
-import S from "./home.module.scss";
+import S from "./projects.module.scss";
 
 const Projects = () => {
     const projectList = [{

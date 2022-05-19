@@ -5,16 +5,16 @@ import { useLocation } from 'react-router-dom'
 import { useHistory } from "react-router-dom";
 const HEADER_LINKS = [{
     title: 'Projects',
-    link: '/about-us',
+    link: '/projects',
     isDownload: false
 }, {
     title: 'Contact',
-    link: '/our-gear',
+    // link: '/our-gear',
     isDownload: false
 },
 {
     title: 'Download CV',
-    link: '/our-gear',
+    // link: '/our-gear',
     isDownload: true
 },
 ]
@@ -36,7 +36,7 @@ const Header = () => {
 
     const history = useHistory();
     const goTo = (route) => {
-        // history.push(route)
+        history.push(route)
     }
 
     const downloadFile = () => {
