@@ -131,6 +131,13 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
+  &:hover {
+    background-color: black;
+    color: white;
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+  }
 }
 
 .learn_more_text {
@@ -141,4 +148,14 @@
 
   color: #000000;
   margin-right: 14px;
+  &:hover {
+    color: white;
+  }
+}
+
+.arrow{
+  color:black
+  &:hover {
+    color: white;
+  }
 }

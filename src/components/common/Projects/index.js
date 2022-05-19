@@ -34,7 +34,9 @@ const Projects = () => {
                 <p className={S.project_description}>{project._description}</p>
                 <div className={S.learn_more_container}>
                     <div className={S.learn_more_text}>LEARN MORE</div>
-                    <img src={ArrowRight}></img>
+                    <svg className={S.arrow} width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="currentColor" />
+                    </svg>
                 </div>
             </div>
         </div>)}

@@ -6,6 +6,8 @@ import Monkey from 'src/images/monkey.gif'
 import { HeaderFooterHoc, Idea, Projects } from "src/components";
 import DiagonalArrow from 'src/images/diagonal_arrow.svg'
 import Karla from 'src/images/karla.png'
+import { useHistory } from "react-router-dom";
+import { PROJECTS } from "src/shared/constants";
 
 const socialLinks = [{
   _id: 1,
@@ -27,6 +29,11 @@ const Home = ({ }) => {
       <div><a className={S.social_media_name} href={link._url} target="_blank">{link._name}</a><img src={DiagonalArrow} /></div>
     ))}</div>
   }
+  const history = useHistory();
+  const goTo = (route) => {
+    history.push(route)
+  }
+
   return (
     <div className={S.container}>
       <main className={S.main}>
@@ -53,7 +60,7 @@ const Home = ({ }) => {
                         Welcome to my portfolio. Inside this portfolio/prototype you will find my recent projects that I’ve been working.
                         I love creating innovative interfaces and enjoyable experiences for the user.
                       </p>
-                      <p className={S.introduction_line5}>
+                      <p className={S.introduction_line5} onClick={() => goTo(PROJECTS)}>
                         SEE PROJECTS
                       </p>
                     </div>
