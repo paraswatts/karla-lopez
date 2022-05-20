@@ -1,5 +1,4 @@
-.projects {
-}
+.projects {}
 
 .project_container {
   width: 1164px;
@@ -22,14 +21,17 @@
     width: 960px;
     height: 249px;
   }
+
   @media (max-width: 1200px) {
     width: 860px;
     height: 249px;
   }
+
   @media (max-width: 991px) {
     width: 768px;
     // margin-bottom: 200px;
   }
+
   @media (max-width: 768px) {
     width: 600px;
     margin-bottom: 200px;
@@ -58,25 +60,30 @@
   @media (max-width: 1400px) {
     width: 820px;
   }
+
   @media (max-width: 1280px) {
     width: 780px;
     height: 270px;
   }
+
   @media (max-width: 1200px) {
     width: 630px;
     left: -80px;
     height: 240px;
   }
+
   @media (max-width: 991px) {
     left: -70px;
     width: 528px;
     height: 200px;
   }
+
   @media (max-width: 768px) {
     width: 370px;
     height: 170px;
     left: -80px;
   }
+
   @media (max-width: 575px) {
     position: relative;
     width: 100%;
@@ -131,13 +138,14 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  
+
   &:hover {
     background-color: black;
     color: white;
     transition: all .4s ease;
     -webkit-transition: all .4s ease;
-    div{
+
+    div {
       color: white;
     }
   }
@@ -151,14 +159,14 @@
 
   color: #000000;
   margin-right: 14px;
+
   &:hover {
     color: white;
   }
 }
 
-.arrow{
-  color:black
-  &:hover {
+.arrow {
+  color:black &:hover {
     color: white;
   }
 }

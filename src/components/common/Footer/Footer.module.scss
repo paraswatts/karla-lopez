@@ -10,9 +10,11 @@
   padding: 59px 128px;
   justify-content: space-between;
   align-items: flex-end;
+
   @media (max-width: 991px) {
     padding: 59px 70px;
   }
+
   @media (max-width: 575px) {
     flex-direction: column;
     padding: 159px 32px 16px;

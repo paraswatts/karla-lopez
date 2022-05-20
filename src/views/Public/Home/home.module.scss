@@ -290,7 +290,7 @@
   text-align: center;
 
   color: #000000;
- 
+
 }
 
 .about_me_line2 {
@@ -300,6 +300,7 @@
   /* or 150% */
 
   color: #000000;
+
   @media (max-width: 768px) {
     // font-size: 1px;
   }
@@ -382,12 +383,14 @@
 }
 
 
-.projects_main_container{
+.projects_main_container {
   padding: 229px 0 100px 0;
+
   @media (max-width: 768px) {
     padding: 169px 0 50px 0;
 
   }
+
   @media (max-width: 575px) {
     display: flex;
     flex-direction: column;
