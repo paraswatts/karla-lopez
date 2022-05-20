@@ -7,10 +7,10 @@ import {
   Route,
 } from "react-router-dom";
 //constants
-import { HOME, PROJECTS } from "src/shared/constants";
+import { CONTACT, HOME, PROJECTS } from "src/shared/constants";
 
 //Views
-import { Home, ProjectsPage, } from "src/views";
+import { Contact, Home, ProjectsPage, } from "src/views";
 
 const PublicRoutes = () => {
   return (
@@ -18,6 +18,7 @@ const PublicRoutes = () => {
       <Switch>
         <Route path={HOME} component={Home} />
         <Route path={PROJECTS} component={ProjectsPage} />
+        <Route path={CONTACT} component={Contact} />
         <Route path="*" component={() => <Redirect push to={HOME} />} />
       </Switch>
     </Router>

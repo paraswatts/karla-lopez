@@ -70,3 +70,18 @@ use {
   border-top: 0px !important;
   border-bottom: 0px !important;
 }
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #A4A4A4;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #A4A4A4;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #A4A4A4;
+}
+

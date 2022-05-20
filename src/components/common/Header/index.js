@@ -9,7 +9,7 @@ const HEADER_LINKS = [{
     isDownload: false
 }, {
     title: 'Contact',
-    // link: '/our-gear',
+    link: '/contact',
     isDownload: false
 },
 {
