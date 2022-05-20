@@ -5,6 +5,8 @@ import Project2 from 'src/images/project2.png'
 import Project3 from 'src/images/project3.png'
 import ArrowRight from 'src/images/arrow_right.svg'
 import S from "./projects.module.scss";
+import { useHistory } from "react-router-dom";
+import { LOOPED_ANIMATIONS } from "src/shared/constants";
 
 const Projects = () => {
     const projectList = [{
@@ -23,16 +25,23 @@ const Projects = () => {
         _id: 3,
         _projectName: 'Looped Animations',
         _description: 'Creative animations made with After effects.',
-        _link: '',
+        _link: LOOPED_ANIMATIONS,
         _image: Project3
     }]
+
+
+    const history = useHistory();
+    const goTo = (route) => {
+        history.push(route)
+    }
+
     return <div className={S.projects}>
         {projectList.map((project, idx) => <div key={idx.toString()} className={S.project_container}>
             <p className={S.project_name} > {project._projectName}</p>
             <img src={project._image} className={S.project_image}></img>
             <div className={S.description_container}>
                 <p className={S.project_description}>{project._description}</p>
-                <div className={S.learn_more_container}>
+                <div className={S.learn_more_container} onClick={() => goTo(project._link)}>
                     <div className={S.learn_more_text}>LEARN MORE</div>
                     <svg className={S.arrow} width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="currentColor" />

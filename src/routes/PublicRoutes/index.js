@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 //constants
 import { CONTACT, HOME, LOOPED_ANIMATIONS, PROJECTS } from "src/shared/constants";
+import ScrollToTop from "src/shared/ScrollToTop";
 
 //Views
 import { AnimationProject, Contact, Home, ProjectsPage, } from "src/views";
@@ -15,6 +16,7 @@ import { AnimationProject, Contact, Home, ProjectsPage, } from "src/views";
 const PublicRoutes = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Switch>
         <Route path={HOME} component={Home} />
         <Route path={PROJECTS} component={ProjectsPage} />

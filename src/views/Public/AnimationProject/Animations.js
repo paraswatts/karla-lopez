@@ -38,7 +38,7 @@ const Animations = ({ }) => {
                       <img src={AnimationSeven} className={S.animation7} />
                     </div>
                     <div className={S.other_projects_container}>
-                      <OtherProjects />
+                      <OtherProjects projectToSkip={3} />
                     </div>
                     <div className={S.lets_turn_idea_container}>
                       <Idea />
