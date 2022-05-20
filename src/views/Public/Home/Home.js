@@ -25,8 +25,8 @@ const socialLinks = [{
 
 const Home = ({ }) => {
   const SocialContacts = () => {
-    return <div className={S.social_container}>{socialLinks.map((link) => (
-      <div><a className={S.social_media_name} href={link._url} target="_blank">{link._name}</a><img src={DiagonalArrow} /></div>
+    return <div className={S.social_container}>{socialLinks.map((link, idx) => (
+      <div key={idx.toString()}><a className={S.social_media_name} href={link._url} target="_blank">{link._name}</a><img src={DiagonalArrow} /></div>
     ))}</div>
   }
   const history = useHistory();

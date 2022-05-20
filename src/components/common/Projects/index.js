@@ -27,7 +27,7 @@ const Projects = () => {
         _image: Project3
     }]
     return <div className={S.projects}>
-        {projectList.map((project) => <div className={S.project_container}>
+        {projectList.map((project, idx) => <div key={idx.toString()} className={S.project_container}>
             <p className={S.project_name} > {project._projectName}</p>
             <img src={project._image} className={S.project_image}></img>
             <div className={S.description_container}>

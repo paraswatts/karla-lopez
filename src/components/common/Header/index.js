@@ -53,12 +53,12 @@ const Header = () => {
                     <ul className="navbar-nav ml-auto align-items-center flex-row justify-content-end">
                         {HEADER_LINKS.map((option, idx) =>
                         (option.isDownload ?
-                            <div className={S.download_container} onClick={downloadFile}>
+                            <div key={idx.toString()} className={S.download_container} onClick={downloadFile}>
                                 <div className={S.download_button}>
                                     DOWNLOAD CV
                                 </div>
                             </div> :
-                            <li className={`${S.menu_option} ${location.pathname === option.link ? S.active : ''}`} key={idx}>
+                            <li key={idx.toString()} className={`${S.menu_option} ${location.pathname === option.link ? S.active : ''}`}>
                                 <p
                                     onClick={() => goTo(option.link)}
                                     className={`${S.link}`}

@@ -26,8 +26,8 @@ const Footer = ({ }) => {
     _name: 'Instagram'
   }]
   const SocialContacts = () => {
-    return <div className={S.social_container}>{socialLinks.map((link) => (
-      <div className={S.contact_container}><a className={S.social_media_name} href={link._url} target="_blank">{link._name}</a><img src={DiagonalArrow} /></div>
+    return <div className={S.social_container}>{socialLinks.map((link, idx) => (
+      <div key={idx.toString()} className={S.contact_container}><a className={S.social_media_name} href={link._url} target="_blank">{link._name}</a><img src={DiagonalArrow} /></div>
     ))}</div>
   }
 

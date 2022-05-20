@@ -1,12 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './App.css';
 import './shared/styles/index.scss'
 import Routes from "./routes";
 import { PersistGate } from "redux-persist/lib/integration/react";
 import { persistor, store } from "./redux/store";
 import { Provider } from "react-redux";
-import { CartProvider } from "use-shopping-cart";
-import getStripe from './shared/stripe/getStripe';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, connectFirestoreEmulator } from 'firebase/firestore';
 import { getApp } from "firebase/app";
@@ -15,26 +13,22 @@ import { getStorage, connectStorageEmulator } from "firebase/storage";
 import { SnackbarProvider } from "notistack";
 import Grow from '@material-ui/core/Grow';
 import { makeStyles } from '@material-ui/core/styles'
-import { getAnalytics } from "firebase/analytics";
+import { getAuth, signInAnonymously, onAuthStateChanged } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBaKm3ZeD8IDaN1b2Y_2o2CHzRRRMsa8OI",
-  authDomain: "postablur-app.firebaseapp.com",
-  databaseURL: "https://postablur-app.firebaseio.com",
-  projectId: "postablur-app",
-  storageBucket: "postablur-app.appspot.com",
-  messagingSenderId: "56914402503",
-  appId: "1:56914402503:web:820787dc19b6fd46f872e2"
+  apiKey: "AIzaSyBCBqtyDXEP6zXC8LULDKaLrPbuGHR6l94",
+  authDomain: "karla-lopez.firebaseapp.com",
+  projectId: "karla-lopez",
+  storageBucket: "karla-lopez.appspot.com",
+  messagingSenderId: "155228029387",
+  appId: "1:155228029387:web:5b78cbba642a19746c364e",
+  measurementId: "G-CH0EZN2WD8"
 };
+
 const firebaseApp = initializeApp(firebaseConfig);
 export const functions = getFunctions(getApp());
 export const db = getFirestore();
 export const storage = getStorage();
-if (window.location.hostname === 'localhost') {
-  // connectFirestoreEmulator(db, 'localhost', 8080);
-  // connectFunctionsEmulator(functions, 'localhost', 5001);
-  // connectStorageEmulator(storage, "localhost", 9199);
-}
 
 function App() {
   const [toggle, setToggle] = useState(false)
@@ -45,13 +39,39 @@ function App() {
     info: { backgroundColor: 'yellow' },
   }));
 
+  useEffect(() => {
+    const auth = getAuth();
+    signInAnonymously(auth)
+      .then(() => {
+        console.log("signed in")
+        // Signed in..
+      })
+      .catch((error) => {
+        console.log("signed in error", error)
+      });
+
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/firebase.User
+        const uid = user.uid;
+        // ...
+      } else {
+        // User is signed out
+        // ...
+      }
+    });
+
+
+  }, [])
+
   const classes = useStyles();
   return (
     <SnackbarProvider
       maxSnack={3}
       anchorOrigin={{
-        vertical: "top",
-        horizontal: "right",
+        vertical: "bottom",
+        horizontal: "left",
       }}
       autoHideDuration={3000}
       classes={{
